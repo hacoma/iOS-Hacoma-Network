@@ -102,15 +102,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C89CB6732532FBBC00564D8B /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				C89CB67B2532FBC200564D8B /* Source */,
-				C89CB67C2532FBC600564D8B /* Supporting Files */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		C89CB67B2532FBC200564D8B /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +127,8 @@
 		C89CB67D2532FBD100564D8B /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				C89CB6732532FBBC00564D8B /* Network */,
+				C89CB67B2532FBC200564D8B /* Source */,
+				C89CB67C2532FBC600564D8B /* Supporting Files */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -404,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Module/Network/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Module/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Module/Network/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Module/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
