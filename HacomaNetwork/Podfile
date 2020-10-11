@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+project 'HacomaNetwork'
+inhibit_all_warnings!
+use_frameworks!
+
+def moya
+    pod 'Moya', '14.0.0'
+end
+
+target :'Network' do
+    moya
+end
