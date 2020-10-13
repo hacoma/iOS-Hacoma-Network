@@ -89,7 +89,7 @@ struct MoyaNetworkTarget: Moya.TargetType {
     let method: Moya.Method
     let sampleData: Data
     let task: Moya.Task
-    let headers: [String : String]?
+    let headers: [String: String]?
     
     init(target: NetworkTarget) {
         baseURL = target.baseURL
