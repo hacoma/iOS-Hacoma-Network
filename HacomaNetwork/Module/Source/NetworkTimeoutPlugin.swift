@@ -9,9 +9,15 @@ import Moya
 
 final class NetworkTimeoutPlugin: PluginType {
     
+    private let timeoutInterval: TimeInterval
+    
+    init(timeoutInterval: TimeInterval) {
+        self.timeoutInterval = timeoutInterval
+    }
+    
     func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
         var request = request
-        request.timeoutInterval = Network.timeoutInterval
+        request.timeoutInterval = timeoutInterval
         return request
     }
 }

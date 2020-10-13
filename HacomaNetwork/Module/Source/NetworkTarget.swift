@@ -15,6 +15,7 @@ public protocol NetworkTarget {
     var sampleData: Data { get }
     var task: Task { get }
     var headers: [String: String]? { get }
+    var timeoutInterval: TimeInterval { get }
 }
 
 public enum Method: String {
@@ -78,14 +79,6 @@ public enum JSONEncoding: ParameterEncoding {
         case .prettyPrinted:
             return Moya.JSONEncoding.prettyPrinted
         }
-    }
-}
-
-public extension NetworkTarget {
-    
-    var headers: [String: String]? {
-        guard let userAgent = Network.userAgent else { return nil }
-        return ["User-Agent": userAgent()]
     }
 }
 

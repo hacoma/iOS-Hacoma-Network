@@ -22,7 +22,7 @@ public final class NetworkProvider<Target: NetworkTarget> {
     }
     
     public func request(target: Target, completion: @escaping Completion) {
-        let plugins = [NetworkTimeoutPlugin()]
+        let plugins = createPlugins(target: target)
         let provider = Provider<Target>(plugins: plugins)
         let moyaTarget = MoyaNetworkTarget(target: target)
         
@@ -44,6 +44,14 @@ public final class NetworkProvider<Target: NetworkTarget> {
     public func cancel(target: Target) {
         cancelCancellables(target: target)
         removeCancellables(target: target)
+    }
+}
+
+extension NetworkProvider {
+    
+    private func createPlugins(target: Target) -> [PluginType] {
+        let timeoutPlugin = NetworkTimeoutPlugin(timeoutInterval: target.timeoutInterval)
+        return [timeoutPlugin]
     }
 }
 
